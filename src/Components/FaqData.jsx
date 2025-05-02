@@ -38,7 +38,7 @@ const FAQ = () => {
             <div className="faq-txt">
             <h4>Frequently asked questions</h4>
             </div>
-            <h2> Constant collaboration is how we roll. Let's see if we are a good fit.</h2>
+            <h2>Constant collaboration is how we roll. Let's see if we are a good fit.</h2>
         </div>
 
         
@@ -46,8 +46,11 @@ const FAQ = () => {
         <div className="faq-drobdown">
         {faqData.map((item, index) => (
           <div key={item.id} className="faq-item">
-            <div className="faq-question" onClick={() => toggle(index)}>
+            <div className={`faq-question ${activeIndex === index ? 'active' : ''}`} onClick={() => toggle(index)}>
+
+              <div className="faq-nmbr">
               <span className="faq-number">{String(item.id).padStart(2, '0')}</span>
+              </div>
               <span className="faq-title">{item.question}</span>
               <span className="faq-icon">{activeIndex === index ? '−' : '+'}</span>
             </div>

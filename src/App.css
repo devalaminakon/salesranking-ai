@@ -67,8 +67,9 @@ a {
   display: flex;
   gap: 33px;
   list-style: none;
-  margin-left: 74px; 
+  margin-left: 74px;
   font-family: "Manrope";
+  margin-right: 573px;
 }
 
 .menu li {
@@ -140,7 +141,7 @@ a {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 26px 0 60px 0;
+  margin: 26px 0 92px 0;
   gap: 25px;
 }
 
@@ -185,11 +186,11 @@ a {
 
 .overlay-card {
   position: absolute;
-  bottom: -106px;
+  bottom: -156px;
   left: -16px;
   background: #FFFFFF;
   border-radius: 27px;
-  padding: 50px 24.62px 57px 31.38px;
+  padding: 70px 24.62px 80px 31.38px;
   box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
   -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
   -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
@@ -400,7 +401,16 @@ a {
   height: 16px;
 }
 
-.analysis-box,
+.analysis-box{
+  width: 470px;
+  background: #EFEFEF;
+  color: #000;
+  border-radius: 20px;
+  gap: 20px;
+  padding: 30px 30px 10px 30px;
+  font-family: "Manrope";
+}
+
 .quick-actions {
   width: 470px;
   background: #EFEFEF;
@@ -411,17 +421,16 @@ a {
   font-family: "Manrope";
 }
 
-.confidence{
+.confiden {
   border-radius: 20px;
   border: 1px solid #E7E7E7;
   background-color: white;
-  gap: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
 }
-
 
 .analysis-box p {
   gap: 4px;
-  padding-top: 20px;
   font-size: 18px;
   position: relative;
   padding-left: 27px;
@@ -441,7 +450,6 @@ a {
 
 .analysis-box p span {
   position: absolute;
-  top: 19px;
   left: -2px;
 }
 
@@ -452,6 +460,7 @@ a {
   font-weight: 700;
   font-family: "Manrope";
   line-height: 100%;
+  margin-bottom: 20px;
 }
 
 .progress-bar-wrapper {
@@ -459,7 +468,6 @@ a {
   align-items: center;
   gap: 10px;
   margin-top: 8px;
-  margin-bottom: 12px;
 }
 
 .progress-bar {
@@ -486,8 +494,9 @@ a {
 
 .confidence {
   padding: 8px 12px;
-  margin: 10px 0;
+  margin: 0 0 20px;
 }
+  
 
 .quick-actions .action-btns {
   display: flex;
@@ -657,7 +666,6 @@ a {
 .course-card img {
   width: 100%;
   border-radius: 8px;
-  margin-bottom: 15px;
 }
 
 .course-meta {
@@ -671,10 +679,9 @@ a {
 .week {
   background: #FFFFFF;
   border-radius: 8px;
-  font-size: 12px;
   font-family: "Manrope";
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 100%;
   padding: 10px 16px;
   color: #4C4C4D;
@@ -715,7 +722,10 @@ a {
   font-family: "Be Vietnam Pro";
   line-height: 150%;
   font-weight: 500;
+  font-size: 18px;
+  font-family: "Be Vietnam Pro";
 }
+
 
 
 /*================================= course-section part end================================= */
@@ -725,8 +735,6 @@ a {
 
 .faq { 
   margin: 40px auto;
-  padding: 0 20px;
-  color: #1a1a1a;
   position: relative;
 }
 
@@ -734,9 +742,6 @@ a {
   display: flex;
 }
 
-.faq-txt{
-  margin-top: 25px;
-}
 
 .faq-label h4{
   font-size: 24px;
@@ -777,7 +782,7 @@ a {
   font-weight: 500;
 }
 
-.faq-number {
+.faq-nmbr {
   margin-right: 32px;
   font-size: 32px;
   color: #8B7D4C;
@@ -785,6 +790,8 @@ a {
   font-family: "Questrial";
   line-height: 100%;
 }
+
+
 
 .faq-title {
   flex-grow: 1;
@@ -796,10 +803,8 @@ a {
 }
 
 .faq-icon {
-  font-size: 22px;
-  color: #000;
-  font-weight: bold;
-  padding-left: 12px;
+  font-size: 50px;
+  color: #111111;
 }
 
 /* Wrapper for smooth toggle */
@@ -823,6 +828,13 @@ a {
   margin-left: 67px;
 }
 
+.faq-question.active .faq-nmbr {
+  margin-top: 30px;
+}
+
+
+
+
 
 
 /*================================= faq part end================================= */
@@ -836,16 +848,16 @@ a {
 
 .testimonia{
   position: relative;  
+  overflow: hidden;
 }
 
 .slider-shappe {
   position: absolute;
-  top: -50px;
-  width: 100%;
+  top: 60px;
   height: 100%;
   left: 50%;
   transform: translateX(-50%);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .testimonial-slider-wrapper {
@@ -1022,8 +1034,6 @@ a {
   text-align: center;
   border-radius: 24px;
   padding: 80px;
-  max-width: 800px;
-  width: 100%;
   margin: 0 auto;
 }
 
@@ -1052,7 +1062,7 @@ a {
   color: #00245F;
   cursor: pointer;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 160%;
   font-family: 'Manrope';
   border: none;
@@ -1079,8 +1089,6 @@ a {
   top: -2px;
   width: 100%;
   height: 100%;
-  left: 50%;
-  transform: translateX(-50%);
   right: 50%;
   transform: translateX(50%);
 }
@@ -1174,11 +1182,14 @@ a {
 }
 
 .footer-column p span {
-  font-size: 14px;
   color: #002868;
   font-family: 'Manrope';
 }
 
+.footer-column p span i {
+  font-weight: bold;
+  font-size: 23px;
+}
 
 .footer_border{
   border: 1px solid #B4B4B4;

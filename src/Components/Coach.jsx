@@ -142,7 +142,7 @@ function App() {
           <div className="analysis">
           <div className="analysis-box">
             <h3>Real-time Analysis</h3>
-            <div className="confidence">
+            <div className="confiden">
             <p><span><img src={Tik} alt="" /></span> Confidence Level</p>
             <div className="progress-bar-wrapper">
               <div className="progress-bar">
@@ -151,7 +151,7 @@ function App() {
                 <span className="progress-label">60%</span>
             </div>
             </div>
-            <div className="confidence">
+            <div className="confiden">
             <p><span><img src={Frame} alt="" /></span>Confidence Level</p>
             <h6>85% improvement in objection handling</h6>
             </div>
@@ -161,11 +161,11 @@ function App() {
             <h3>Quick Actions</h3>
             <div className="action-btns">
               <div className="action">
-                <img src={Shape1} alt="" />
+                <img src={Shape2} alt="" />
                  <h4>Generate Script</h4>
                  </div>
               <div className="action">
-                <img src={Shape2} alt="" />
+                <img src={Shape1} alt="" />
                 <h4>Practice Pitch</h4>
               </div>
             </div>

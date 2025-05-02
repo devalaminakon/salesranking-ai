@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Container from "../Components/Container";
 import SliderImg from "../assets/images/slider.png";
-import BannerNoise from "./BannerNoise";
 import  './responsive.css';
 
 
@@ -64,7 +63,6 @@ const TestimonialSlider = () => {
 
   return (
     <div className="testimonia">
-      <BannerNoise />
     <div className="slider-shappe">
       <img src={SliderImg} alt="" />
     </div>
