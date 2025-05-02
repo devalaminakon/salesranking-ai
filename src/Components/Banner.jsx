@@ -4,13 +4,17 @@ import Robot1 from "../assets/images/ai-robot.png";
 import Robot2 from "../assets/images/ai-robot2.png";
 import Icon1 from "../assets/images/icon (1).png";
 import Icon2 from "../assets/images/icon (2).png";
-import Shape from "../assets/images/shape.png";
+import BannerImg from "../assets/images/shape.png";
+import BannerNoise from "./BannerNoise";
+import  './responsive.css';
+
 
 const Banner = () => {
   return (
     <section className="banner">
+      <BannerNoise/>
       <div className="banner-shape">
-        <img src={Shape} alt="" />
+        <img src={BannerImg} alt="" />
       </div>
       <Container>
         <div className="banner-wrapper">
@@ -38,7 +42,7 @@ const Banner = () => {
                 <div className="left-icon">
                   <img src={Icon1} alt="" />
                 </div>
-                <div>
+                <div className="right-text">
                   <h3>2000+</h3>
                   <p>Your protection</p>
                 </div>
@@ -46,7 +50,7 @@ const Banner = () => {
               <div className="feature-item">
                 <div className="left-icon">
                 <img src={Icon2} alt="" /></div>
-                <div>
+                <div className="right-text">
                   <h3>7001+</h3>
                   <p>Provide tailored</p>
                 </div>

@@ -1,4 +1,5 @@
-import React from 'react'; // We'll create this CSS file next
+import React from 'react'; 
+import  './responsive.css';
 
 const Container = ({ children, className = '' }) => {
   return (

@@ -1,17 +1,41 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Plus Jakarta Sans', 'Manrope', 'Poppins',;  
-  background-image: url('./assets//images/Background\ Noise.png');
-  background-repeat: repeat;
-  background-size: auto;
+  /* font-family: 'Plus Jakarta Sans', 'Manrope', 'Poppins' 'Questrial',;   */
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebyside {
+  display: flex;
+  justify-content: space-between;
+}
 
 /* container */
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -19,6 +43,7 @@ body {
 .navbar {
   width: 100%;
   padding: 30px 0 112px 0;
+  position: relative;
 }
 
 .navbar-content {
@@ -72,12 +97,26 @@ body {
 /*================================== banner part start=================================== */
 .banner{
   position: relative;
+  padding-bottom: 50px;
+}
+
+.banner-noise {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  height: 113%;
+  right: 50%;
+  width: 100%;
 }
 
 .banner-shape {
   position: absolute;
-  top: -220px;
-  left: -245px;
+  top: -190px;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .banner-wrapper {
@@ -101,7 +140,8 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 26px 0 92.11px 0;
+  margin: 26px 0 60px 0;
+  gap: 25px;
 }
 
 .robot-with-text p {
@@ -116,18 +156,13 @@ body {
 .features {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.left-icon{
-  padding: 15.58px 16.69px;
-  background-color: #FFFFFF;
-  border-radius: 15.57px;
+  gap: 34.49px;
 }
 
 .icon-placeholder {
@@ -150,13 +185,31 @@ body {
 
 .overlay-card {
   position: absolute;
-  bottom: -237px;
-  left: 65px;
+  bottom: -106px;
+  left: -16px;
   background: #FFFFFF;
   border-radius: 27px;
   padding: 50px 24.62px 57px 31.38px;
-  width: 467px;
-  height: 359px;
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
+  width: 440px;
+}
+
+.left-icon{
+  padding: 20px;
+  border-radius: 15.57px;
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
+}
+
+.left-robot-image{
+  padding: 20px;
+  border-radius: 15.57px;
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
+  -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
+  -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.41);
 }
 
 .overlay-card .stats {
@@ -175,6 +228,7 @@ body {
 .overlay-card .title {
   font-weight: 600;
   font-size: 27.98px;
+  font-family: "Manrope";
   margin: 23px 0 39px 0;
   color: #05131D;
 }
@@ -188,3 +242,961 @@ body {
   line-height: 163%;
   width: 365px;
 }
+
+.right-text{
+  font-family: "Manrope";
+  gap: 5px;
+}
+
+.right-text h3{
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 110.000000%;
+}
+
+.right-text p{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 163%;
+  color: #05131DB2;
+  margin-top: 5px;
+}
+
+/*================================== banner part end=================================== */
+
+
+
+/*================================= SuggestionCoach part start================================= */
+/* App.css */
+.suggestion-section {
+  padding: 40px 0; 
+  background: #002868;
+  background: linear-gradient(90deg, rgba(0, 40, 104, 1) 0%, rgba(30, 95, 235, 1) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.coach-title h5{
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 100%;
+  font-family: "Questrial";
+  color: #FCE38A;
+}
+
+.coach-title h1{
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 120%;
+  font-family: "Questrial";
+  color: #FFFFFF;
+  padding: 20px 0 60px 0;
+}
+
+.chat-box {
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  width: 787px;
+  max-height: 577px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.chat-header {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #1B1B1B;
+  padding-left: 32px;
+  padding-top: 16px;
+  font-family: "Manrope";
+  line-height: 120%;
+}
+
+.chat-messages {
+  background: #F2F3F3;
+  padding: 15px;
+  border-radius: 5px;
+  height: 345px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+.message {
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 80%;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.message.user {
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+}
+
+.suggestions {
+  display: flex;
+  gap: 12.82px;
+  justify-content: center;
+}
+
+.suggestions button {
+  background: #00286814;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 36px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #002868;
+  font-family: "Geist";
+}
+.chat-input {
+  display: flex;
+  margin: 16px 41.23px 24px 41.23px;
+  gap: 12px;
+}
+
+.chat-input input {
+  width: 600px;
+  height: 48px;
+  border-radius: 4px;
+  border: 1px solid #E5E7EB;
+  padding-left: 23px;
+  color: #9A9A9A;
+  font-size: 14px;
+  line-height: 400;
+  font-family: "Manrope";
+}
+
+.chat-input button {
+  background: #002e6e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: "Geist";
+}
+
+.up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.up img {
+  width: 13.99;
+  height: 16px;
+}
+
+.analysis-box,
+.quick-actions {
+  width: 470px;
+  background: #EFEFEF;
+  color: #000;
+  border-radius: 20px;
+  gap: 20px;
+  padding: 30px;
+  font-family: "Manrope";
+}
+
+.confidence{
+  border-radius: 20px;
+  border: 1px solid #E7E7E7;
+  background-color: white;
+  gap: 12px;
+}
+
+
+.analysis-box p {
+  gap: 4px;
+  padding-top: 20px;
+  font-size: 18px;
+  position: relative;
+  padding-left: 27px;
+  font-family: "Manrope";
+  font-weight: 600;
+  line-height: 132%;
+}
+
+.analysis-box h6 {
+  font-size: 18px;
+  position: relative;
+  font-family: "Manrope";
+  font-weight: 400;
+  line-height: 32px;
+  color: #909090;
+}
+
+.analysis-box p span {
+  position: absolute;
+  top: 19px;
+  left: -2px;
+}
+
+.analysis-box h3,
+.quick-actions h3 {
+  color: #323232;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: "Manrope";
+  line-height: 100%;
+}
+
+.progress-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 10px;
+  background-color: #DFDFDF;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 60%;
+  background-color: #28c76f;
+  border-radius: 5px;
+  transition: width 0.4s ease;
+}
+
+.progress-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6D6D6D;
+}
+
+.confidence {
+  padding: 8px 12px;
+  margin: 10px 0;
+}
+
+.quick-actions .action-btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.analysis {
+  gap: 24px;
+  display: grid;
+}
+
+.analysis-actions {
+  align-items: center;
+  display: flex;
+}
+
+.sidebylike{
+  gap: 24px;
+}
+
+.action {
+  flex: 1;
+  background: #FFFFFF;
+  padding: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Manrope";
+  line-height: 132%;
+  margin-top: 20px;
+}
+
+.like{
+  align-items: center;
+  display: flex;
+} 
+
+.like ul{
+  padding: 24px;
+  background: #ffffff;
+  gap: 40px;
+  display: grid;
+  border-radius: 57px;
+  border: 1px solid #4E4E4E1A;
+}
+
+/* Scrollbar styling */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+
+.bot-message-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bot-avatar {
+  margin: -46px 14px 0px 0px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+  flex-shrink: 0;
+}
+
+/* Optional: make all messages look clean without background */
+.message-text {
+  font-size: 18px;
+  font-family: "Lato";
+  color: #181818;
+  background: #FFFFFF;
+  padding: 12px 25px;
+  border: none;
+  font-weight: 400;
+  line-height: 32px;
+  border-radius: 8px;
+}
+
+
+
+/*================================= SuggestionCoach part end================================= */
+
+
+/*================================= course-section part start================================= */
+
+
+
+.course-section {
+  padding: 40px 0;
+  position: relative;
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-header h2 {
+  font-size: 48px;
+  color: #262626;
+  font-weight: 600;
+  font-family: "Manrope";
+  line-height: 150%;
+}
+
+.view-all-btn {
+  background: #002868;
+  color: white;
+  border: none;
+  padding: 18px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: "Manrope";
+  font-size: 18px;
+  line-height: 150%;
+  margin-top: 45px;
+}
+
+
+.course-description {
+  font-size: 18px;
+  color: #59595A;
+  font-family: "Manrope";
+  font-weight: 400;
+  line-height: 150%;
+  width: 1029px;
+}
+
+.courses {
+  display: flex;
+  gap: 30px;
+  margin-top: 48px;
+  justify-content: space-between;
+}
+
+.course-card {
+  background: #F0F0F0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 50px;
+  width: 100%;
+  gap: 30px;
+  max-width: 705px;
+  display: grid;
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.course-meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.week {
+  background: #FFFFFF;
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  padding: 10px 16px;
+  color: #4C4C4D;
+}
+
+.author {
+  margin-left: auto;
+  font-size: 20px;
+  color: #262626;
+  font-family: "Manrope";
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.course-card h3 {
+  font-size: 24px;
+  color: #262626;
+  font-family: "Manrope";
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.course-card p {
+  font-size: 18px;
+  color: #4C4C4D;
+  font-family: "Manrope";
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.get-btn {
+  padding: 18px;
+  background: #002868;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Be Vietnam Pro";
+  line-height: 150%;
+  font-weight: 500;
+}
+
+
+/*================================= course-section part end================================= */
+
+/*================================= faq part start================================= */
+
+
+.faq { 
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #1a1a1a;
+  position: relative;
+}
+
+.faq-label{
+  display: flex;
+}
+
+.faq-txt{
+  margin-top: 25px;
+}
+
+.faq-label h4{
+  font-size: 24px;
+  font-weight: 400;
+  color: #001C4A; 
+  font-family: "Questrial";
+  line-height: 100%;
+  width: 280PX;
+}
+
+.faq-label h2 {
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  color: #111111;
+  line-height: 120%;
+  font-family: "Questrial";
+  width: 920px;
+  margin: 0 auto;
+  padding-right: 130px;
+}
+
+.faq-drobdown{
+  margin-top: 80px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #CCCCCC;
+  padding: 20px 0;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.faq-number {
+  margin-right: 32px;
+  font-size: 32px;
+  color: #8B7D4C;
+  font-weight: 400;
+  font-family: "Questrial";
+  line-height: 100%;
+}
+
+.faq-title {
+  flex-grow: 1;
+  color: #111111;
+  font-size: 40px;
+  font-weight: 400;
+  font-family: "Questrial";
+  line-height: 100%;
+}
+
+.faq-icon {
+  font-size: 22px;
+  color: #000;
+  font-weight: bold;
+  padding-left: 12px;
+}
+
+/* Wrapper for smooth toggle */
+.faq-answer-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer-wrapper.open {
+  max-height: 300px; /* enough height to show content */
+}
+
+.faq-answer {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #636363;
+  max-width: 1100px;
+  line-height: 140%;
+  margin-left: 67px;
+}
+
+
+
+/*================================= faq part end================================= */
+
+
+
+
+
+
+/*================================= testimonial part start================================= */
+
+.testimonia{
+  position: relative;  
+}
+
+.slider-shappe {
+  position: absolute;
+  top: -50px;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-x: hidden;
+}
+
+.testimonial-slider-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+
+.testimonial-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.testimonial-slide.active {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.testimonia-slice {
+  width: 1280px;
+  margin: 50px auto;
+  padding: 30px 20px;
+}
+
+.testimonial-text {
+  font-size: 22px;
+  line-height: 1.7;
+  color: #010205;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-family: "Manrope";
+  line-height: 160%;
+}
+
+
+.testimonial-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #ccc; /* Placeholder */
+  margin-right:24px;
+}
+
+.testimonial-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-name {
+  font-size: 20px;
+  color: #010205;
+  font-family: "Manrope";
+  font-weight: 700;
+  line-height: 180%;
+}
+
+.testimonial-title {
+  font-weight: 500;
+  color: #878C91;
+  font-family: "Manrope";
+  font-size: 16px;
+  line-height: 180%;
+}
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.testimonial-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.testimonial-btn.outline {
+  width: 88px;
+  height: 56px;
+  border-radius: 70px;
+  background: transparent;
+  border: 1px solid #00245F;
+  color: #00245F;
+}
+
+
+.testimonial-btn.fill {
+  color: white;
+  width: 88px;
+  height: 56px;
+  border-radius: 70px;
+  background: transparent;
+  border: 1px solid #00245F;
+  color: #00245F;
+}
+
+.testimonial-pagination {
+  font-size: 20px;
+  font-family: "Manrope";
+  font-weight: 600;
+  line-height: 180%;
+  color: #01020566;
+  }
+
+  
+  .pagination-current {
+    border-bottom: 1px solid #00245F;
+    color: #00245F;
+  }
+  
+  
+
+  .testimonial-pagination span {
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .testimonial-pagination span.active {
+    color: #00256c;
+    text-decoration: underline;
+  }
+  
+  .testimonial-btn.active {
+    background-color: #002868; 
+    color: white;
+    border: 1px solid #002868;
+    transition: all 0.3s ease;
+  }
+
+/*================================= testimonial part end================================= */
+
+
+/*================================= ready-to-hire part start================================= */
+
+.ready-to-hire {
+  position: relative;
+  padding: 32px 0 131px 0;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  z-index: 11;
+}
+
+.ready-box {
+  background: RGBA(16, 53, 112, 1); 
+  background: linear-gradient(90deg, rgba(16, 53, 112, 1) 0%, rgba(0, 79, 206, 1) 100%); 
+  color: white;
+  text-align: center;
+  border-radius: 24px;
+  padding: 80px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ready-box h2 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 130%;
+  color: #fff;
+  font-family: 'Manrope';
+}
+
+.ready-box p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #B9BDC7;
+  font-family: 'Manrope';
+  margin-top: 12px;
+  margin-bottom: 48px;
+}
+
+.join-now-btn {
+  background-color: #FCE38A;
+  border-radius: 50px;
+  padding: 16px 36px;
+  color: #00245F;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 160%;
+  font-family: 'Manrope';
+  border: none;
+}
+
+
+/*================================= ready-to-hire part end================================= */
+
+
+/*================================= footer part start================================= */
+
+.footer-noise {
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  bottom: 0;
+  height: 100%;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.footer-shape {
+  position: absolute;
+  top: -2px;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.footer {
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  padding-bottom: 90px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-right{
+  gap: 115px;
+}
+
+.footer-description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials a {
+  font-size: 20px;
+  width: 34px;
+  height: 34px;
+  color: #00256c;
+  transition: color 0.2s ease;
+  background-color: #FFFFFF;
+  text-align: center;
+  align-items: center;
+  display: inline-grid;
+  border-radius: 50%;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  font-family: 'Manrope';
+  margin-bottom: 36px;
+  color: #001C4A;
+}
+
+
+.footer-column a{
+  display: block;
+  font-size: 14px;
+  color: #335386;
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 100%;
+  font-family: 'Manrope';
+  margin-bottom: 24px;
+
+}
+
+ .footer-description {
+  display: block;
+  font-size: 14px;
+  color: #335386;
+  margin-bottom: 8px;
+  text-decoration: none;
+  font-family: 'Manrope';
+  font-weight: 400;
+  line-height: 24px;
+  padding: 30px 0;
+  width: 534px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  color: #335386;
+  margin-bottom: 24px;
+  font-family: 'Manrope';
+  font-weight: 400;
+  gap: 5px;
+  display: flex;
+}
+
+.footer-column p span {
+  font-size: 14px;
+  color: #002868;
+  font-family: 'Manrope';
+}
+
+
+.footer_border{
+  border: 1px solid #B4B4B4;
+  margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
